@@ -122,3 +122,12 @@ for(i in 2:length(rownames(triclassExprsML))){
 
 dataPlot(allCfMats,triclassLabels, main='UGR confusion matrix with mRMR Plasma Signature', 
          mode = "confusionMatrix", toPNG = TRUE)
+
+dataframe = as.data.frame(triclassExprsML)
+dataframe['Label'] <- triclassLabels
+
+
+ggplot(dataframe, aes(y=TXNIP, fill=Label)) + geom_boxplot()
+
+
+
