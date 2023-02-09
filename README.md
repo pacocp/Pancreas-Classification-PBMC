@@ -1,4 +1,4 @@
-# Differentiation between pancreatic ductal carcinoma. pancreatitis and control  patients from liquid byopsy data using machine learning
+# Differentiation between pancreatic ductal carcinoma. pancreatitis and control  patients from liquid biopsy data using machine learning
 
 Classification between pancreatic ductal carcinoma, pancreatitis and control using machine learning techniques.
 
