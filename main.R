@@ -123,11 +123,27 @@ for(i in 2:length(rownames(triclassExprsML))){
 dataPlot(allCfMats,triclassLabels, main='UGR confusion matrix with mRMR Plasma Signature', 
          mode = "confusionMatrix", toPNG = TRUE)
 
-dataframe = as.data.frame(triclassExprsML)
-dataframe['Label'] <- triclassLabels
+#### TEST ON THE SERUM DATA WITH 6 GENES ####
 
+signature_6_genes <- c("TXNIP", "IL7R", "CCL4", "PTPRC", "HP", "CD27")
+match_signature = match(signature_6_genes, rownames(triclassExprs))
+triclassExprs <- triclassExprs[match_signature,]
+triclassExprsML = t(triclassExprs)
 
-ggplot(dataframe, aes(y=TXNIP, fill=Label)) + geom_boxplot()
+MRMR_svm_results_ugr <- svm_trn(triclassExprsML, triclassLabels, vars_selected = colnames(triclassExprsML), 
+                                numFold = length(rownames(triclassExprsML)))
 
+dataPlot(MRMR_svm_results_ugr$accuracyInfo$meanAccuracy,
+         labels = as.factor(triclassLabels),
+         main = "Classification Serum 3 clases with mRMR 6 genes",
+         mode = "classResults",
+         ygrid = T)
 
+allCfMats <- MRMR_svm_results_ugr$cfMats[[1]]$table
+for(i in 2:length(rownames(triclassExprsML))){
+  allCfMats <- allCfMats + MRMR_svm_results_ugr$cfMats[[i]]$table
+}
+
+dataPlot(allCfMats,triclassLabels, main='UGR confusion matrix with mRMR 6-gene Plasma Signature', 
+         mode = "confusionMatrix", toPNG = TRUE)
 
