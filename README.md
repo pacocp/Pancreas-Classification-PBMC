@@ -1,4 +1,4 @@
-# Differentiation between pancreatic ductal carcinoma. chronic pancreatitis and control  patients from liquid biopsy data using machine learning
+# 6-gene machine learning-found signature for the differentiation of pancreatic ductal carcinoma and chronic pancreatitis patients on peripheral blood mononuclear cells RNA data
 
 Classification between pancreatic ductal carcinoma, pancreatitis and control using machine learning techniques.
 
