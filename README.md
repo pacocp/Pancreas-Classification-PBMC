@@ -4,7 +4,7 @@ Classification between pancreatic ductal carcinoma, pancreatitis and control usi
 
 ## Data acquisition
 
-The plasma data used to find the genetic signature can be downloaded from the [GEO serie webpage](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133684).
+The plasma data used to find the genetic signature can be downloaded from the [GEO serie webpage](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE133684). PBMC data can be obtained in the RAW_experssion.csv file.
 
 
 ## Usage
