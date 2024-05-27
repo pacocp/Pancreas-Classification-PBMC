@@ -1,4 +1,4 @@
-# 6-gene machine learning-found signature for the differentiation of pancreatic ductal carcinoma and chronic pancreatitis patients on peripheral blood mononuclear cells RNA data
+# Machine Learning Identifies 6-Gene Signature in Peripheral Blood for Pancreatic Cancer Diagnosis
 
 Classification between pancreatic ductal carcinoma, pancreatitis and control using machine learning techniques.
 
